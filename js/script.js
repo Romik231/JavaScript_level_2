@@ -69,22 +69,32 @@ function Menu(my_id, my_class, my_items) {
 
 
 
-function SubMenu(sub_id, sub_name, sub_class) {
-    Menu.call(this);
-    this.id = sub_id;
-    this.className = sub_class;
-    this.name = sub_name;
+function SubMenu(my_id, my_class, my_items) {
+    Container.call(this);
+    this.id = my_id;
+    this.className = my_class;
+    this.items = my_items;
+
 };
 
 
 SubMenu.prototype = Object.create(Menu.prototype);
 SubMenu.prototype.constructor = SubMenu;
 SubMenu.prototype.render = function () {
-    return '<li id=' + this.id + ' class=' + this.className + '>' + this.name + '</li>'
+    let result = '<ul id="' + this.id + '" class="' + this.className + '">';
+        for (let item in this.items) {
+            if (this.items[item] instanceof Menu) {
+                result += this.items[item].render();
+                result += '</ul>';
+            } else {
+                for (let i in this.items[item]) {
+                     result += this.items[item][i].render();
+                }
+            }
+        }
+        result += '</ul>';
+        return result;
 };
-
-
-
 
 
 Menu.prototype = Object.create(Container.prototype);
@@ -95,8 +105,6 @@ Menu.prototype.render = function () {
     for (let item in this.items){
         if (this.items[item] instanceof MenuItem) {
             result += this.items[item].render();
-        } if(this.items[item] instanceof SubMenu) {
-            result += '<li>' + this.items[item].render() + '</li>';
         }
     }
     result += '</ul>';
@@ -121,17 +129,11 @@ MenuItem.prototype.render = function () {
 let m_item1 = new MenuItem("/", "Главная");
 let m_item2 = new MenuItem("/catalogue", "Каталог");
 let m_item3 = new MenuItem("/gallery", "Галерея");
-
-let sub_menu1 = new SubMenu("sub_item", "Контакты", "submenu");
-let sub_menu2 = new SubMenu("about us", "О нас", "submenu");
-let sub_menu3 = new SubMenu("Read_more", "Подробнее", "submenu");
-
-let m_items = {0: m_item1, 1: m_item2, 2: m_item3, 3: sub_menu1, 4: sub_menu2, 5: sub_menu3};
-
-
+let m_items = {0: m_item1, 1: m_item2, 2: m_item3};
 
 
 let menu = new Menu("my_menu", "menu_class", m_items);
+let submenu = new SubMenu("main_menu", "sub_menu", [m_items, menu]);
 
-document.write(menu.render());
+document.write(submenu.render());
 

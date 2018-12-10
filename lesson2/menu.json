@@ -1,5 +1,5 @@
-
 [
+
 	{"href": "/catalogue/", "title": "Каталог товаров", "submenu":
 	[
 	  {"href": "#", "title": "Фото-видео"},
@@ -9,19 +9,19 @@
 	  {"href": "#", "title": "ТВ и Видео"}
 
 	]},
-  
-	{"href": "/reviews/", "title": "Обзоры товаров"},
-  
-	{"href": "/delivery/", "title": "Доставка", "submenu":
+
+
+
+	{"href": "/cabinet/", "title": "Личный кабинет", "submenu":
 	[
 	  {"href": "#", "title": "Доставка по городу"},
 	  {"href": "#", "title": "Правила доставки"},
 	  {"href": "#", "title": "Получение товара"}
 	]},
-  
-	{"href": "/service_centre/", "title": "Гарантия"},
-  
-	{"href": "/contacts/", "title": "Контакты", "submenu":
+
+
+
+	{"href": "/share/", "title": "Промоакции", "submenu":
 	[
 	  {"href": "#", "title": "Отдел продаж"},
 	  {"href": "#", "title": "Магазины и пункты выдачи"},

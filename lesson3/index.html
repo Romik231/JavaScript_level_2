@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css"> </head>
+
+<body>
+    <div class="container clearfix">
+        <form class="message" action="#" method="post">
+            <h3>сообщение</h3>
+            <br>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis similique, consequatur a quos maxime, delectus rerum qui numquam beatae praesentium sint corporis repudiandae facere minima ratione ipsum cupiditate, consequuntur excepturi fuga consectetur saepe magni tenetur.</p>
+            <br>
+            <label for="name">Ваше имя <span>(Обязательно)</span>:</label>
+            <br>
+            <input type="text" id="name" name="user_name" required><span>Обязательно к заполнению!</span>
+            <br>
+            <label for="email">Ваш E-mail <span>(Обязательно)</span>:</label>
+            <br>
+            <input type="email" id="email" name="user_email" pattern="([a-zA-Z0-9_-]+)(@)([a-zA-Z0-9_-]+)\.([a-z]{2,})" required><span>Обязательно к заполнению!</span>
+            <br>
+            <label for="msg">Сообщение <span>(Обязательно)</span>:</label>
+            <br>
+            <textarea name="msg" id="msg" cols="30" rows="10" required></textarea>
+            <br>
+            <br>
+            <button type="submit">Отправить</button>
+        </form>
+        <div class="authoriz_registr clearfix">
+            <div class="author clearfix">
+                <form class="authorization" action="#" method="post">
+                    <h3>авторизация</h3>
+                    <br>
+                    <label for="login">Логин</label>
+                    <br>
+                    <input type="text" id="login"  name="user_login" required>
+                    <br>
+                    <label for="password">Пароль</label>
+                    <br>
+                    <input type="password" id="password" name="user_password" required>
+                    <br>
+                    <input type="checkbox" id="remeber_me" name="user_choises">
+                    <label for="remeber_me">Запомнить меня</label>
+                    <br> <a href="#">Забыли пароль?</a>
+                    <button type="submit">ВОЙТИ</button>
+                </form>
+            </div>
+            <div class="reg">
+                <form class="registration" id="registration" action="#" name="registration" method="post">
+                    <h3>регистрация</h3>
+                    <br>
+                    <label for="login">Логин<span>(Обязательно)</span>:</label>
+                    <br>
+                    <input type="text" id="login" name="user_login" required>
+                    <br>
+                    <label for="password">Пароль<span>(Обязательно)</span>:</label>
+                    <br>
+                    <input value="" type="password" id="password" name="user_password" required>
+                    <br>
+                    <label for="password">Пароль ещё раз<span>(Обязательно)</span>:</label>
+                    <br>
+                    <input type="password" id="password_verify" name="user_password_verify" required>
+                    <br>
+                    <label for="email">E-mail<span>(Обязательно)</span>:</label>
+                    <br>
+                    <input type="email" id="email" name="user_email" pattern="([a-zA-Z0-9_-]+)(@)([a-zA-Z0-9_-]+)\.(a-z{2,})" required>
+                    <br>
+                    <label for="tel">Телефон:</label>
+                    <br>
+                    <input class="phone" type="tel" id="phone" name="user_phone" placeholder="+7(000)000-000">
+                    <br>
+                    <input type="checkbox" id="check" name="user_choises"> <span>Я прочитал и согласен с </span><a href="#">условиями использования</a>
+                    <br>
+                    <br>
+                    <button id="send" type="submit">SUBMIT</button>
+                    
+                </form>
+                
+            </div>
+            <script src="js/regular_expression.js"></script>
+            <!--<script src="js/jquery-3.3.1.min.js"></script>
+                    <script src="js/jquery.mask.min.js"></script>
+                    <script>
+                        $(document).ready(function () {
+                            $('.phone').mask('+7 (000) 000-00-00');
+                        })
+                    </script>-->
+        </div>
+    </div>
+</body>
+
+</html>

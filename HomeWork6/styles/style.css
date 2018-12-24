@@ -1,0 +1,248 @@
+@font-face {
+    font-family: "Myride";
+    src: url(../fonts/myriadpro-regular.ttf)
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 1280px;
+    margin: 0 auto;
+    padding: 50px;
+
+}
+
+
+/*Стили для формы отправки сообщения*/
+
+
+
+form{
+    margin: 0 auto;
+}
+.message {
+    float: left;
+    width: 582px;
+    border: 1px solid;
+    padding: 18px;
+    box-sizing: border-box;
+    background: #2d2d2d;
+    border-radius: 3px;
+}
+
+h3 {
+    border-bottom: 1px solid #8c8c8c;
+    font-family: "Myride";
+    text-transform: uppercase;
+    color: #fff;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+    margin: 0 -9px
+}
+
+p {
+    font-family: Arial;
+    color: #8c8c8c;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 17px;
+    text-align: left;
+}
+important{
+    
+}
+.message input[type="text"]:valid,
+.message input[type="email"]:valid,
+.authorization input[type="text"],
+.authorization input[type="password"],
+.registration input[type="text"],
+.registration input[type="password"],
+.registration input[type="email"],
+.registration input[type="tel"] {
+    width: 341px;
+    height: 32px;
+    border-radius: 5px;
+    color: #fff;
+    -webkit-box-shadow: inset 0 2px 1px 0px #000000;
+    box-shadow: inset 0 2px 1px 1px #000000;
+    background: repeating-linear-gradient(45deg, #222, #222 10px, #333 10px, #333 22px);
+    );
+    border: 1px solid #2d2d2d;
+    opacity: 0.5;
+}
+
+.message input[type="text"]:invalid,
+
+.message input[type="email"]:invalid {
+   
+    width: 341px;
+    height: 32px;
+    border-radius: 5px;
+    color: #fff;
+    -webkit-box-shadow: inset 0 2px 1px 0px #000000;
+    box-shadow: inset 0 2px 1px 1px #000000;
+    background: repeating-linear-gradient(45deg, #3E0E0E, #3E0E0E 10px, #881B1B 10px, #881B1B 22px);
+    );
+    border: 1px solid #2d2d2d;
+    opacity: 0.5;
+}
+.message input+span{
+    font-family: Arial;
+    color:  #8c8c8c;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 17px;
+    text-align: left;
+    text-shadow: 0px 1px 0px #000000;
+    display: inline-block;
+    margin-left: 5px;
+    
+}
+
+.message input[type="text"]:invalid
+ +span:before,
+.message input[type="email"]:invalid
+ +span:before{
+    content: url(../img/Layer%206.png);
+    
+}
+
+.message input[type="text"]:valid
+ +span,
+.message input[type="email"]:valid
+ +span{
+     visibility: hidden;
+}
+
+
+label {
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 19px;
+    text-align: left;
+}
+
+label span {
+    color: #d20000;
+}
+
+textarea {
+    width: 546px;
+    background: repeating-linear-gradient( 45deg, #222, #222 10px, #333 10px, #333 25px);
+    color: #fff;
+    border: 1px solid #2d2d2d;
+    -webkit-box-shadow: inset 0 2px 2px 1px #000000;
+    box-shadow: inset 0 2px 2px 1px #000000;
+}
+
+button {
+    float: right;
+    background: gray;
+    width: 76px;
+    height: 31px;
+    font-family: Arial;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 18px;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px black;
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+    border: none;
+    box-sizing: border-box;
+    
+}
+button:hover{
+    
+    background: #881B1B;
+    
+}
+button:active{
+    box-shadow:none;
+    
+    
+    
+}
+
+/*Стили для формы авторизации и регистрации*/
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.authoriz_registr {
+    float: left;
+    margin: 0 36px;
+}
+
+.authorization,
+.registration {
+    width: 421px;
+    background: #2d2d2d;
+    float: left;
+    padding: 20px 25px;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+.authorization input[type="text"],
+.authorization input[type="password"],
+.registration input[type="text"],
+.registration input[type="password"],
+.registration input[type="email"],
+.registration input[type="tel"] {
+    width: 373px;
+}
+
+input[type="checkbox"] {
+    margin-top: 14px;
+    margin-right: 5px;
+}
+
+a,
+.reg input+span {
+    color: #8c8c8c;
+    font-family: sans-serif;
+    font-size: 12px;
+}
+
+a:hover {
+    color: red;
+}
+
+
+/*Стили для формы регистрации*/
+
+.reg {
+    margin-top: 28px;
+}
+
+#city{
+    margin-top: 10px;
+    width: 200px;
+    background: #2d2d2d;
+    color: white;
+}
+
+#dialogic_windows{
+    display: none;
+}
+#for_login p, #for_email p, #for_phone p{
+    font-size: 1em;
+    text-align: center;
+
+}
+#for_login,#for_email,#for_phone{
+    color: white;
+    background: #2d2d2d;
+}
+.ui-button:active{
+    background: #881B1B;
+}
